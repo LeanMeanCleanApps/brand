@@ -9,7 +9,7 @@ Each section below names the exact file and where to put it. Every path is relat
 
 ### Organisation avatar
 
-Upload `logos/org-slate/png/org-slate-square-512.png` under **Organisation settings → Profile → Profile picture**. GitHub crops avatars to a circle in some places and a rounded square in others. The square file has enough padding to survive both.
+Upload `logos/org-spectrum/png/org-spectrum-square-512.png` under **Organisation settings → Profile → Profile picture**. GitHub crops avatars to a circle in some places and a rounded square in others. The square file has enough padding to survive both.
 
 ### Organisation profile
 
@@ -53,11 +53,11 @@ NuGet recommends a 128 × 128 PNG, which is above the 48 pixel cut-off for the s
 
 ### Account avatar
 
-NuGet.org takes profile pictures from [Gravatar](https://gravatar.com). Set `org-slate-square-512.png` as the Gravatar for the email address on the NuGet account (or the organisation account, if you make one).
+NuGet.org takes profile pictures from [Gravatar](https://gravatar.com). Set `org-spectrum-square-512.png` as the Gravatar for the email address on the NuGet account (or the organisation account, if you make one).
 
 ## Docker Hub
 
-Upload `org-slate-square-512.png` wherever Docker asks for the account or organisation avatar, in the account or organisation settings. Older Docker accounts pull the avatar from Gravatar instead, so setting the Gravatar (see above) covers those. If an image gets its own repository page later, the overview supports Markdown, so the template's social preview works as a header image there too.
+Upload `org-spectrum-square-512.png` wherever Docker asks for the account or organisation avatar, in the account or organisation settings. Older Docker accounts pull the avatar from Gravatar instead, so setting the Gravatar (see above) covers those. If an image gets its own repository page later, the overview supports Markdown, so the template's social preview works as a header image there too.
 
 ## Docs sites
 
@@ -98,17 +98,17 @@ The base file sets the ink and paper greys and the three typefaces. The accent f
 
 ## An organisation website
 
-When the organisation gets its own site at `leanmeancleanapps.github.io`, it uses the slate icons, the leaf accent and the spectrum mark for the hero:
+The organisation's site at [leanmeancleanapps.github.io](https://leanmeancleanapps.github.io) uses the spectrum icons and hero, with leaf as the accent:
 
 | What | File |
 | --- | --- |
-| Favicons | `logos/org-slate/web/favicon.svg`, `favicon.ico`, `apple-touch-icon.png` |
-| Manifest icons | `logos/org-slate/web/icon-192.png`, `icon-512.png`, `icon-maskable-512.png` |
+| Favicons | `logos/org-spectrum/web/favicon.svg`, `favicon.ico`, `apple-touch-icon.png` |
+| Manifest icons | `logos/org-spectrum/web/icon-192.png`, `icon-512.png`, `icon-maskable-512.png` |
 | Link preview | `social/png/og-image.png` |
-| Hero | `logos/org-spectrum/svg/org-spectrum.svg` |
-| Starlight theme | `tokens/starlight/base.css` and `tokens/starlight/org.css` |
+| Hero | `logos/org-spectrum/svg/org-spectrum.svg` and `org-spectrum-light.svg` |
+| Colours | `tokens/tokens.css` |
 
-A web manifest for it:
+Its repository copies them across with `npm run sync-brand -- ../brand`. A web manifest for a site like it:
 
 ```json
 {

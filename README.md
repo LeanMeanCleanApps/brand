@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/preview.png" alt="The Lean Mean Clean Apps marks: slate, leaf and spectrum organisation marks above one ring mark per template." width="100%">
+  <img src="assets/preview.png" alt="The Lean Mean Clean Apps marks: spectrum, slate and leaf organisation marks above one ring mark per template." width="100%">
 </p>
 
 # Lean Mean Clean Apps brand
@@ -12,7 +12,7 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 
 | Where | File |
 | --- | --- |
-| GitHub organisation avatar | [org-slate-square-512.png](assets/logos/org-slate/png/org-slate-square-512.png) |
+| GitHub organisation avatar | [org-spectrum-square-512.png](assets/logos/org-spectrum/png/org-spectrum-square-512.png) |
 | NuGet.org and Docker Hub avatar | The same file. NuGet.org takes its avatar from [Gravatar](https://gravatar.com), and some Docker accounts do too. |
 | Organisation profile README banner | [banner.png](assets/social/png/banner.png) |
 | Repository social preview (Settings → General → Social preview) | [assets/social/png/](assets/social/png/), one per repository |
@@ -24,9 +24,9 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 
 | Mark | Folder | Hue | Used for |
 | --- | --- | --- | --- |
-| Organisation, slate | `org-slate` | Slate | The default: avatars, profile pictures, favicons |
+| Organisation, spectrum | `org-spectrum` | Every template hue | The default: avatars, favicons, banners and link previews |
+| Organisation, slate | `org-slate` | Slate | The quiet version, for when spectrum would be too loud |
 | Organisation, leaf | `org-leaf` | Leaf | The alternative, and the accent colour for organisation websites |
-| Organisation, spectrum | `org-spectrum` | Every template hue | Banners and link previews, where colour is the point. Not avatars: at small sizes it turns to confetti. |
 | Clean Minimal API | `minimalapi` | Emerald | [CleanMinimalApi](https://github.com/stphnwlsh/CleanMinimalApi) |
 | Clean Web API | `webapi` | Blue | [CleanWebApi](https://github.com/stphnwlsh/CleanWebApi) |
 | Clean GraphQL API | `graphql` | Pink | [CleanGraphQLApi](https://github.com/stphnwlsh/CleanGraphQLApi) |
@@ -66,7 +66,7 @@ The editable social SVGs in `social/source/` need the three typefaces in `fonts/
 
 ## Using the mark
 
-- **One hue per mark.** A template uses only its own hue. The organisation uses slate, leaf or spectrum.
+- **One hue per mark.** A template uses only its own hue. The organisation uses spectrum, slate or leaf.
 - **Rings alternate shades, and the left half is one shade lighter.** Every change of colour lands on a gap, never in the middle of a segment.
 - **Use the small version at 48 pixels and below.** It keeps the core and two rings with wider cuts so it still reads at favicon size.
 - **Dark backgrounds by default.** On light backgrounds use the `-light` version, or keep the ink tile or circle behind the standard one.
