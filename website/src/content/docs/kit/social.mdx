@@ -1,6 +1,6 @@
 ---
 title: Social templates
-description: Repository previews, organisation cards, the profile banner and the link preview image.
+description: Repository previews, README banners, organisation cards, the profile banner and the link preview image.
 ---
 
 import SocialGrid from '../../../components/SocialGrid.astro';
@@ -18,10 +18,10 @@ Upload these in each repository under **Settings → General → Social preview*
 <SocialGrid
   files={[
     { file: 'CleanMinimalApi', title: 'CleanMinimalApi', size: '1280 × 640' },
-    { file: 'CleanWebApi', title: 'CleanWebApi', size: '1280 × 640' },
-    { file: 'CleanGraphQLApi', title: 'CleanGraphQLApi', size: '1280 × 640' },
     { file: 'CleanModelContextProtocol', title: 'CleanModelContextProtocol', size: '1280 × 640' },
-    { file: 'CleanLamdaFunction', title: 'CleanLamdaFunction', size: '1280 × 640' },
+    { file: 'CleanGraphQLApi', title: 'CleanGraphQLApi', size: '1280 × 640' },
+    { file: 'CleanWebApi', title: 'CleanWebApi', size: '1280 × 640' },
+    { file: 'CleanLambdaFunction', title: 'CleanLambdaFunction', size: '1280 × 640' },
     { file: 'brand', title: 'brand', size: '1280 × 640' },
   ]}
 />
@@ -37,6 +37,21 @@ The organisation card comes in all three organisation colours. Spectrum is the d
     { file: 'LeanMeanCleanApps-leaf', title: 'Organisation card, leaf', size: '1280 × 640' },
     { file: 'banner', title: 'Profile banner', size: '1500 × 500' },
     { file: 'og-image', title: 'Link preview', size: '1200 × 630' },
+  ]}
+/>
+
+## README banners
+
+A short strip for the top of each template's README and NuGet readme, in `assets/banners/`. It's dark on purpose, so it reads on GitHub's light and dark themes and on NuGet.org without a second version. Link it from `raw.githubusercontent.com/LeanMeanCleanApps/brand/main/assets/banners/png/<template>.png`, so a rebuild here updates every repository at once.
+
+<SocialGrid
+  dir="banners"
+  files={[
+    { file: 'minimalapi', title: 'Clean Minimal API', size: '1280 × 320' },
+    { file: 'mcp', title: 'Clean Model Context Protocol', size: '1280 × 320' },
+    { file: 'graphql', title: 'Clean GraphQL API', size: '1280 × 320' },
+    { file: 'webapi', title: 'Clean Web API', size: '1280 × 320' },
+    { file: 'lambda', title: 'Clean Lambda Function', size: '1280 × 320' },
   ]}
 />
 

@@ -175,6 +175,27 @@ for (const s of socials) {
   write(out('assets', 'social', 'png', `${s.file}.png`), png(svg, s.width));
 }
 
+// ---------- README banners ----------
+// A short strip for the top of each template's README and NuGet page. Dark, so it reads on light and dark pages alike.
+
+for (const t of current) {
+  const spec = {
+    width: 1280,
+    height: 320,
+    scale: 0.8,
+    radius: 20,
+    kicker: org.name,
+    title: t.name,
+    tagline: `Clean Architecture for ${t.what}, minus the ceremony.`,
+    logo: { fill: byKey[t.key].dark, core: neutrals.paper },
+    accent: scales[t.hue],
+  };
+  const svg = socialSvg(spec);
+  write(out('assets', 'banners', 'svg', `${t.key}.svg`), svg);
+  write(out('assets', 'banners', 'source', `${t.key}.svg`), socialSvg(spec, { editable: true }));
+  write(out('assets', 'banners', 'png', `${t.key}.png`), png(svg, 1280));
+}
+
 // ---------- Preview for the README ----------
 
 {

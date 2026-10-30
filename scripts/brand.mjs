@@ -32,7 +32,7 @@ export const templates = [
   { key: 'mcp', name: 'Clean Model Context Protocol', repo: 'CleanModelContextProtocol', package: 'CleanModelContextProtocol.Template', shortName: 'cleanmodelcontextprotocol', hue: 'violet', what: 'Model Context Protocol servers' },
   { key: 'graphql', name: 'Clean GraphQL API', repo: 'CleanGraphQLApi', package: 'CleanGraphQLApi.Template', shortName: 'cleangraphqlapi', hue: 'pink', what: 'GraphQL on Hot Chocolate' },
   { key: 'webapi', name: 'Clean Web API', repo: 'CleanWebApi', package: 'CleanWebApi.Template', shortName: 'cleanwebapi', hue: 'blue', what: 'ASP.NET Core Web APIs' },
-  { key: 'lambda', name: 'Clean Lambda Function', repo: 'CleanLamdaFunction', package: 'CleanLambdaFunction.Template', shortName: 'cleanlambdafunction', hue: 'amber', what: 'AWS Lambda' },
+  { key: 'lambda', name: 'Clean Lambda Function', repo: 'CleanLambdaFunction', package: 'CleanLambdaFunction.Template', shortName: 'cleanlambdafunction', hue: 'amber', what: 'AWS Lambda' },
   { key: 'grpc', name: 'Clean gRPC', hue: 'cyan', what: 'gRPC services', reserved: true },
   { key: 'worker', name: 'Clean Worker', hue: 'red', what: 'background workers', reserved: true },
   { key: 'cli', name: 'Clean CLI', hue: 'lime', what: 'command line tools', reserved: true },

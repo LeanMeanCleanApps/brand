@@ -2,9 +2,10 @@
 // Social templates with links to each format.
 interface Props {
   files: { file: string; title: string; size: string }[];
+  dir?: string;
 }
-const { files } = Astro.props;
-const base = `${import.meta.env.BASE_URL}assets/social`;
+const { files, dir = 'social' } = Astro.props;
+const base = `${import.meta.env.BASE_URL}assets/${dir}`;
 ---
 
 <div class="cl-social not-content">

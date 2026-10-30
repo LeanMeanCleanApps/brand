@@ -16,6 +16,7 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 | NuGet.org and Docker Hub avatar | The same file. NuGet.org takes its avatar from [Gravatar](https://gravatar.com), and some Docker accounts do too. |
 | Organisation profile README banner | [banner.png](assets/social/png/banner.png) |
 | Repository social preview (Settings → General → Social preview) | [assets/social/png/](assets/social/png/), one per repository |
+| Banner at the top of a template's README and NuGet readme | `assets/banners/png/<template>.png`, linked from `raw.githubusercontent.com` so every repository shows the current one |
 | NuGet package icon | Replace `icon.png` at the root of each template repository with `assets/logos/<template>/png/<template>-square-128.png`. The csproj already packs it as `images/icon.png`. |
 | Website favicons and manifest icons | `assets/logos/<mark>/web/` |
 | Link preview for a website | [og-image.png](assets/social/png/og-image.png) |
@@ -31,7 +32,7 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 | [Clean Model Context Protocol](https://leanmeancleanapps.github.io/mcp/) | `mcp` | Violet | [CleanModelContextProtocol](https://github.com/stphnwlsh/CleanModelContextProtocol) |
 | [Clean GraphQL API](https://leanmeancleanapps.github.io/graphql/) | `graphql` | Pink | [CleanGraphQLApi](https://github.com/stphnwlsh/CleanGraphQLApi) |
 | [Clean Web API](https://leanmeancleanapps.github.io/webapi/) | `webapi` | Blue | [CleanWebApi](https://github.com/stphnwlsh/CleanWebApi) |
-| [Clean Lambda Function](https://leanmeancleanapps.github.io/lambda/) | `lambda` | Amber | [CleanLamdaFunction](https://github.com/stphnwlsh/CleanLamdaFunction) |
+| [Clean Lambda Function](https://leanmeancleanapps.github.io/lambda/) | `lambda` | Amber | [CleanLambdaFunction](https://github.com/LeanMeanCleanApps/CleanLambdaFunction) |
 | gRPC, Worker, CLI | `grpc`, `worker`, `cli` | Cyan, red, lime | Reserved for templates that don't exist yet. Ambitious, we know. |
 
 ## What's in here
@@ -45,6 +46,9 @@ assets/
   social/png/           Social previews, banner and link preview, ready to upload
   social/svg/           The same, with text as outlines
   social/source/        The same, with live text and named layers for editing
+  banners/png/          README banners, one per template
+  banners/svg/          The same, with text as outlines
+  banners/source/       The same, with live text and named layers for editing
 tokens/                 tokens.json, tokens.css and Starlight themes
 scripts/                The generator
 fonts/                  Bricolage Grotesque, Inter and JetBrains Mono
