@@ -11,9 +11,9 @@ const sentence = (s: string) => s[0].toUpperCase() + s.slice(1);
 const items =
   which === 'org'
     ? [
-        { key: 'org-slate', name: 'Slate', note: 'Default' },
+        { key: 'org-spectrum', name: 'Spectrum', note: 'Default' },
+        { key: 'org-slate', name: 'Slate', note: 'Quiet' },
         { key: 'org-leaf', name: 'Leaf', note: 'Alternative' },
-        { key: 'org-spectrum', name: 'Spectrum', note: 'Banners and big moments' },
       ]
     : brand.templates.map((t) => ({ key: t.key, name: t.name.replace('Clean ', ''), note: sentence(t.reserved ? `${t.hue}, reserved` : t.hue) }));
 ---

@@ -13,9 +13,9 @@ for (const dir of ['assets', 'tokens']) {
 
 fs.mkdirSync(path.join(site, 'src', 'data'), { recursive: true });
 fs.cpSync(path.join(repo, 'tokens', 'starlight'), path.join(site, 'src', 'data', 'starlight'), { recursive: true });
-fs.copyFileSync(path.join(repo, 'assets/logos/org-slate/svg/org-slate-small-tile.svg'), path.join(site, 'src/data/logo.svg'));
+fs.copyFileSync(path.join(repo, 'assets/logos/org-spectrum/svg/org-spectrum-small-tile.svg'), path.join(site, 'src/data/logo.svg'));
 fs.copyFileSync(path.join(repo, 'assets/logos/org-spectrum/svg/org-spectrum.svg'), path.join(site, 'src/data/hero.svg'));
 for (const f of ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png']) {
-  fs.copyFileSync(path.join(repo, 'assets/logos/org-slate/web', f), path.join(site, 'public', f));
+  fs.copyFileSync(path.join(repo, 'assets/logos/org-spectrum/web', f), path.join(site, 'public', f));
 }
 fs.writeFileSync(path.join(site, 'src', 'data', 'brand.json'), JSON.stringify({ neutrals, scales, org, templates }, null, 2));

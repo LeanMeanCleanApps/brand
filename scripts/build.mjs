@@ -190,7 +190,7 @@ for (const s of socials) {
   const heading =
     outline({ text: org.name, role: 'display', weight: 800, size: 60, x: 80, y: 120, fill: neutrals.paper, tracking: -0.02 }) +
     outline({ text: 'Brand', role: 'body', weight: 400, size: 28, x: 84, y: 168, fill: scales.slate[300] });
-  const orgRow = [['org-slate', 'Slate', 'Default'], ['org-leaf', 'Leaf', 'Alternative'], ['org-spectrum', 'Spectrum', 'Banners']]
+  const orgRow = [['org-spectrum', 'Spectrum', 'Default'], ['org-slate', 'Slate', 'Quiet'], ['org-leaf', 'Leaf', 'Alternative']]
     .map(([k, l, n], i) => cell(80 + i * 330, 230, 270, byKey[k], l, n)).join('');
   const tRow = templates.map((t, i) => cell(80 + i * 184, 650, 150, byKey[t.key], short[t.key], t.reserved ? 'Reserved' : null)).join('');
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><rect width="${W}" height="${H}" fill="${neutrals.ink}"/>${heading}${orgRow}${tRow}</svg>\n`;
