@@ -27,11 +27,11 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 | Organisation, spectrum | `org-spectrum` | Every template hue | The default: avatars, favicons, banners and link previews |
 | Organisation, slate | `org-slate` | Slate | The quiet version, for when spectrum would be too loud |
 | Organisation, leaf | `org-leaf` | Leaf | The alternative, and the accent colour for organisation websites |
-| Clean Minimal API | `minimalapi` | Emerald | [CleanMinimalApi](https://github.com/stphnwlsh/CleanMinimalApi) |
-| Clean Web API | `webapi` | Blue | [CleanWebApi](https://github.com/stphnwlsh/CleanWebApi) |
-| Clean GraphQL API | `graphql` | Pink | [CleanGraphQLApi](https://github.com/stphnwlsh/CleanGraphQLApi) |
-| Clean Model Context Protocol | `mcp` | Violet | [CleanModelContextProtocol](https://github.com/stphnwlsh/CleanModelContextProtocol) |
-| Clean Lambda Function | `lambda` | Amber | [CleanLamdaFunction](https://github.com/stphnwlsh/CleanLamdaFunction) |
+| [Clean Minimal API](https://leanmeancleanapps.github.io/minimalapi/) | `minimalapi` | Emerald | [CleanMinimalApi](https://github.com/stphnwlsh/CleanMinimalApi) |
+| [Clean Web API](https://leanmeancleanapps.github.io/webapi/) | `webapi` | Blue | [CleanWebApi](https://github.com/stphnwlsh/CleanWebApi) |
+| [Clean GraphQL API](https://leanmeancleanapps.github.io/graphql/) | `graphql` | Pink | [CleanGraphQLApi](https://github.com/stphnwlsh/CleanGraphQLApi) |
+| [Clean Model Context Protocol](https://leanmeancleanapps.github.io/mcp/) | `mcp` | Violet | [CleanModelContextProtocol](https://github.com/stphnwlsh/CleanModelContextProtocol) |
+| [Clean Lambda Function](https://leanmeancleanapps.github.io/lambda/) | `lambda` | Amber | [CleanLamdaFunction](https://github.com/stphnwlsh/CleanLamdaFunction) |
 | gRPC, Worker, CLI | `grpc`, `worker`, `cli` | Cyan, red, lime | Reserved for templates that don't exist yet. Ambitious, we know. |
 
 ## What's in here
