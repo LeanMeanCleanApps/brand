@@ -1,0 +1,38 @@
+---
+title: Lean Mean Clean Apps design library
+description: Logos, colours, type and social templates for every Lean Mean Clean Apps template.
+template: splash
+hero:
+  title: Everything that makes us look this clean
+  tagline: Logos, colours, type and social templates for every Lean Mean Clean Apps template. Take what you need and put it everywhere.
+  image:
+    file: ../../data/hero.svg
+    alt: The Lean Mean Clean Apps spectrum mark
+  actions:
+    - text: Grab the files
+      link: downloads/
+      icon: right-arrow
+    - text: Read the rules
+      link: brand/logo/
+      variant: minimal
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import MarkGrid from '../../components/MarkGrid.astro';
+
+## One mark, a different colour for each template
+
+Every template wears the same ring mark. The core in the middle never changes, just like the Application and Infrastructure layers never change from one template to the next. The rings around it take each template's own colour, the way the presentation layer is the bit that changes.
+
+<MarkGrid which="templates" />
+
+## Pick your path
+
+<CardGrid>
+  <LinkCard title="Quick downloads" description="The files you need for GitHub, NuGet, Docker Hub and the docs sites, all on one page." href="downloads/" />
+  <LinkCard title="The ring mark" description="What the rings mean, how they're coloured, and the handful of rules that keep it looking sharp." href="brand/logo/" />
+  <LinkCard title="Organisation mark" description="Slate, leaf and spectrum, and when to use each one." href="brand/organisation/" />
+  <LinkCard title="Colour" description="Ink, paper and one hue per template, with every shade written down." href="brand/colour/" />
+  <LinkCard title="Social templates" description="Repository previews, the organisation banner and the link preview image." href="kit/social/" />
+  <LinkCard title="Tokens and themes" description="CSS variables, a JSON token file and drop-in Starlight themes." href="kit/tokens/" />
+</CardGrid>

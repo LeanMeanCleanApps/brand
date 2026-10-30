@@ -1,0 +1,36 @@
+---
+title: Template marks
+description: One hue per template, plus the hues held for templates that don't exist yet.
+---
+
+import MarkGrid from '../../../components/MarkGrid.astro';
+
+<MarkGrid which="templates" />
+
+## Who gets which hue
+
+| Template | Repository | Package | Hue |
+| --- | --- | --- | --- |
+| Clean Minimal API | [CleanMinimalApi](https://github.com/stphnwlsh/CleanMinimalApi) | `CleanMinimalApi.Template` | Emerald |
+| Clean Web API | [CleanWebApi](https://github.com/stphnwlsh/CleanWebApi) | `CleanWebApi.Template` | Blue |
+| Clean GraphQL API | [CleanGraphQLApi](https://github.com/stphnwlsh/CleanGraphQLApi) | `CleanGraphQLApi.Template` | Pink |
+| Clean Model Context Protocol | [CleanModelContextProtocol](https://github.com/stphnwlsh/CleanModelContextProtocol) | `CleanModelContextProtocol.Template` | Violet |
+| Clean Lambda Function | [CleanLamdaFunction](https://github.com/stphnwlsh/CleanLamdaFunction) | `CleanLambdaFunction.Template` | Amber |
+
+## Reserved hues
+
+Three hues are held for templates that might come next. Their marks are generated so the slots are visible, but nothing uses them yet.
+
+| Possible template | Hue |
+| --- | --- |
+| gRPC | Cyan |
+| Worker | Red |
+| CLI | Lime |
+
+The hues are spread around the colour wheel so no two templates sit close together. Red is used for workers rather than rose, because rose sits too close to GraphQL's pink once it's shaded.
+
+## Adding a template
+
+1. Pick a hue that's well away from the ones in use. The reserved hues are the obvious first choices.
+2. Add the template to `templates` in `scripts/brand.mjs`.
+3. Run `npm run build`. Its logos, social preview, tokens and Starlight theme all appear.

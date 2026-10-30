@@ -1,0 +1,57 @@
+---
+title: Design tokens
+description: The colours and typefaces as JSON, CSS variables and Starlight themes.
+---
+
+The same colours and typefaces you see on [Colour](../../brand/colour/) and [Typography](../../brand/typography/), in files code can use. They're all in `tokens/`, generated from `scripts/brand.mjs`, so never edit them by hand.
+
+| File | What it's for |
+| --- | --- |
+| [`tokens.json`](../../tokens/tokens.json) | Every colour scale, the template hues and the font stacks, in the [Design Tokens Community Group](https://www.designtokens.org) format. Style Dictionary, Figma Tokens Studio and most token tools read it. |
+| [`tokens.css`](../../tokens/tokens.css) | The same values as CSS custom properties, for any website. |
+| `starlight/base.css` | The shared Starlight theme: ink and paper greys, the three typefaces. |
+| `starlight/<key>.css` | One accent per template, plus `org.css` for the organisation. Pair one with `base.css`. |
+
+## CSS variables
+
+Every variable starts with `--lmca-`:
+
+```css
+@import url('https://leanmeancleanapps.github.io/design-library/tokens/tokens.css');
+
+.callout {
+  background: var(--lmca-ink);
+  color: var(--lmca-paper);
+  border-left: 4px solid var(--lmca-minimalapi);
+  font-family: var(--lmca-font-body);
+}
+```
+
+| Variable | Value |
+| --- | --- |
+| `--lmca-ink`, `--lmca-paper` | The two neutrals. |
+| `--lmca-<scale>-<step>` | Every step of every scale, from `--lmca-slate-50` to `--lmca-lime-900`. |
+| `--lmca-<key>` | A template's hue at step 500, such as `--lmca-graphql`. Reserved hues are included. |
+| `--lmca-org` | The organisation accent, leaf 500. |
+| `--lmca-font-display`, `--lmca-font-body`, `--lmca-font-mono` | Font stacks with system fallbacks. |
+
+Linking straight to this site works for experiments. For anything real, copy the file into your project so a change here can't surprise you.
+
+## JSON
+
+Template hues are aliases, so a token tool keeps them in step with the scale they point at:
+
+```json
+{
+  "template": {
+    "minimalapi": {
+      "$description": "Clean Minimal API",
+      "hue": { "$type": "color", "$value": "{color.emerald.500}" }
+    }
+  }
+}
+```
+
+## Starlight themes
+
+Each accent file sets Starlight's accent colours (and its purple, which some components use instead) from the template's scale: step 400 in dark mode and 700 in light mode, so links pass contrast on both. [Using the assets](../platforms/#docs-sites) shows the full setup.

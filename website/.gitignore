@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+
+# Copied in by scripts/sync.mjs from ../assets and ../tokens
+public/assets/
+public/tokens/
+public/favicon.svg
+public/favicon.ico
+public/apple-touch-icon.png
+src/data/

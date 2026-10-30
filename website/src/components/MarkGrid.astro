@@ -1,0 +1,33 @@
+---
+// A grid of marks with their names. which: 'org' or 'templates'.
+import brand from '../data/brand.json';
+
+interface Props {
+  which: 'org' | 'templates';
+}
+const { which } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const sentence = (s: string) => s[0].toUpperCase() + s.slice(1);
+const items =
+  which === 'org'
+    ? [
+        { key: 'org-slate', name: 'Slate', note: 'Default' },
+        { key: 'org-leaf', name: 'Leaf', note: 'Alternative' },
+        { key: 'org-spectrum', name: 'Spectrum', note: 'Banners and big moments' },
+      ]
+    : brand.templates.map((t) => ({ key: t.key, name: t.name.replace('Clean ', ''), note: sentence(t.reserved ? `${t.hue}, reserved` : t.hue) }));
+---
+
+<div class:list={['cl-marks', which]}>
+  {
+    items.map((i) => (
+      <a href={`${base}kit/logos/#${i.name.toLowerCase().replace(/\s+/g, '-')}`}>
+        <img src={`${base}assets/logos/${i.key}/svg/${i.key}-tile.svg`} alt="" loading="lazy" />
+        <span>
+          <b>{i.name}</b>
+          <small>{i.note}</small>
+        </span>
+      </a>
+    ))
+  }
+</div>

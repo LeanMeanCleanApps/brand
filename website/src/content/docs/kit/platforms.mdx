@@ -1,0 +1,128 @@
+---
+title: Using the assets
+description: Where each file goes on GitHub, NuGet, Docker Hub and the docs sites.
+---
+
+Each section below names the exact file and where to put it. Every path is relative to `assets/` in this repository, and every file is also on this site under the same path.
+
+## GitHub
+
+### Organisation avatar
+
+Upload `logos/org-slate/png/org-slate-square-512.png` under **Organisation settings → Profile → Profile picture**. GitHub crops avatars to a circle in some places and a rounded square in others. The square file has enough padding to survive both.
+
+### Organisation profile
+
+GitHub shows `profile/README.md` from a public repository called `.github` on the organisation's home page. Put the banner at the top:
+
+```md
+<p align="center">
+  <img src="https://leanmeancleanapps.github.io/design-library/assets/social/png/banner.png" alt="Lean Mean Clean Apps" width="100%">
+</p>
+```
+
+The same `.github` repository can hold the shared community files (code of conduct, contributing guide, security policy, issue templates), so every repository in the organisation picks them up without its own copy.
+
+### Repository social previews
+
+Upload `social/png/<Repository>.png` under **Settings → General → Social preview** in each repository. GitHub wants 1280 × 640, which is what these are.
+
+## NuGet
+
+### Package icon
+
+Each template packs the `icon.png` at its repository root into the package as `images/icon.png`:
+
+```xml
+<PackageIcon>images/icon.png</PackageIcon>
+...
+<None Include="../icon.png" Pack="true" PackagePath="images/" />
+```
+
+So the only change is the file itself. Replace `icon.png` in each repository with that template's 128 pixel square:
+
+| Repository | Replace `icon.png` with |
+| --- | --- |
+| CleanMinimalApi | `logos/minimalapi/png/minimalapi-square-128.png` |
+| CleanWebApi | `logos/webapi/png/webapi-square-128.png` |
+| CleanGraphQLApi | `logos/graphql/png/graphql-square-128.png` |
+| CleanModelContextProtocol | `logos/mcp/png/mcp-square-128.png` |
+| CleanLamdaFunction | `logos/lambda/png/lambda-square-128.png` |
+
+NuGet recommends a 128 × 128 PNG, which is above the 48 pixel cut-off for the small mark, so these use the full one.
+
+### Account avatar
+
+NuGet.org takes profile pictures from [Gravatar](https://gravatar.com). Set `org-slate-square-512.png` as the Gravatar for the email address on the NuGet account (or the organisation account, if you make one).
+
+## Docker Hub
+
+Upload `org-slate-square-512.png` wherever Docker asks for the account or organisation avatar, in the account or organisation settings. Older Docker accounts pull the avatar from Gravatar instead, so setting the Gravatar (see above) covers those. If an image gets its own repository page later, the overview supports Markdown, so the template's social preview works as a header image there too.
+
+## Docs sites
+
+Every template's docs site uses [Starlight](https://starlight.astro.build). Copy these into the site:
+
+| File | Goes to |
+| --- | --- |
+| `logos/<key>/web/favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | `public/` |
+| `logos/<key>/svg/<key>-small-tile.svg` | `src/assets/logo.svg` |
+| `social/png/<Repository>.png` | `public/og.png` |
+| `tokens/starlight/base.css` and `tokens/starlight/<key>.css` | `src/styles/` |
+
+Then point Starlight at them in `astro.config.mjs`:
+
+```js
+const site = 'https://leanmeancleanapps.github.io';
+const base = '/CleanMinimalApi';
+
+starlight({
+  logo: { src: './src/assets/logo.svg', alt: 'Clean Minimal API' },
+  favicon: '/favicon.svg',
+  head: [
+    { tag: 'link', attrs: { rel: 'icon', href: `${base}/favicon.ico`, sizes: '32x32' } },
+    { tag: 'link', attrs: { rel: 'apple-touch-icon', href: `${base}/apple-touch-icon.png` } },
+    { tag: 'meta', attrs: { property: 'og:image', content: `${site}${base}/og.png` } },
+  ],
+  customCss: [
+    '@fontsource-variable/bricolage-grotesque',
+    '@fontsource-variable/inter',
+    '@fontsource-variable/jetbrains-mono',
+    './src/styles/base.css',
+    './src/styles/minimalapi.css',
+  ],
+});
+```
+
+The base file sets the ink and paper greys and the three typefaces. The accent file colours links, buttons and the sidebar in the template's hue, in both dark and light mode.
+
+## An organisation website
+
+When the organisation gets its own site at `leanmeancleanapps.github.io`, it uses the slate icons, the leaf accent and the spectrum mark for the hero:
+
+| What | File |
+| --- | --- |
+| Favicons | `logos/org-slate/web/favicon.svg`, `favicon.ico`, `apple-touch-icon.png` |
+| Manifest icons | `logos/org-slate/web/icon-192.png`, `icon-512.png`, `icon-maskable-512.png` |
+| Link preview | `social/png/og-image.png` |
+| Hero | `logos/org-spectrum/svg/org-spectrum.svg` |
+| Starlight theme | `tokens/starlight/base.css` and `tokens/starlight/org.css` |
+
+A web manifest for it:
+
+```json
+{
+  "name": "Lean Mean Clean Apps",
+  "short_name": "LMCA",
+  "theme_color": "#0B132A",
+  "background_color": "#0B132A",
+  "display": "standalone",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
+```
+
+The maskable icon has extra padding, so Android can crop it to any shape without clipping the rings.
