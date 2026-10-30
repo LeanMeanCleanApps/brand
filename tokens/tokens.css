@@ -106,9 +106,9 @@
   --lmca-lime-900: #365314;
 
   --lmca-minimalapi: var(--lmca-emerald-500);
-  --lmca-webapi: var(--lmca-blue-500);
-  --lmca-graphql: var(--lmca-pink-500);
   --lmca-mcp: var(--lmca-violet-500);
+  --lmca-graphql: var(--lmca-pink-500);
+  --lmca-webapi: var(--lmca-blue-500);
   --lmca-lambda: var(--lmca-amber-500);
   --lmca-grpc: var(--lmca-cyan-500); /* reserved */
   --lmca-worker: var(--lmca-red-500); /* reserved */

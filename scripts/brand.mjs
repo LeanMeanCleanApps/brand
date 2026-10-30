@@ -29,9 +29,9 @@ export const org = {
 // One hue per template. Reserved entries are hue slots held for templates that don't exist yet.
 export const templates = [
   { key: 'minimalapi', name: 'Clean Minimal API', repo: 'CleanMinimalApi', package: 'CleanMinimalApi.Template', shortName: 'cleanminimalapi', hue: 'emerald', what: 'ASP.NET Core Minimal APIs' },
-  { key: 'webapi', name: 'Clean Web API', repo: 'CleanWebApi', package: 'CleanWebApi.Template', shortName: 'cleanwebapi', hue: 'blue', what: 'ASP.NET Core Web APIs' },
-  { key: 'graphql', name: 'Clean GraphQL API', repo: 'CleanGraphQLApi', package: 'CleanGraphQLApi.Template', shortName: 'cleangraphqlapi', hue: 'pink', what: 'GraphQL on Hot Chocolate' },
   { key: 'mcp', name: 'Clean Model Context Protocol', repo: 'CleanModelContextProtocol', package: 'CleanModelContextProtocol.Template', shortName: 'cleanmodelcontextprotocol', hue: 'violet', what: 'Model Context Protocol servers' },
+  { key: 'graphql', name: 'Clean GraphQL API', repo: 'CleanGraphQLApi', package: 'CleanGraphQLApi.Template', shortName: 'cleangraphqlapi', hue: 'pink', what: 'GraphQL on Hot Chocolate' },
+  { key: 'webapi', name: 'Clean Web API', repo: 'CleanWebApi', package: 'CleanWebApi.Template', shortName: 'cleanwebapi', hue: 'blue', what: 'ASP.NET Core Web APIs' },
   { key: 'lambda', name: 'Clean Lambda Function', repo: 'CleanLamdaFunction', package: 'CleanLambdaFunction.Template', shortName: 'cleanlambdafunction', hue: 'amber', what: 'AWS Lambda' },
   { key: 'grpc', name: 'Clean gRPC', hue: 'cyan', what: 'gRPC services', reserved: true },
   { key: 'worker', name: 'Clean Worker', hue: 'red', what: 'background workers', reserved: true },
