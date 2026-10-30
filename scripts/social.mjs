@@ -10,7 +10,7 @@ const layer = (label, inner) => `<g id="${label.toLowerCase().replace(/\s+/g, '-
 // spec: { width, height, kicker, title, tagline, chip, marks: [{ fill, core }], logo: { fill, core }, accent }
 export function socialSvg(spec, { editable = false } = {}) {
   const { width: W, height: H } = spec;
-  const u = H / 640;
+  const u = spec.scale ?? H / 640; // banners pass a larger scale so the text survives being shrunk to fit a README
   const text = editable ? live : outline;
 
   // The mark is cropped by the right edge, centred vertically.
@@ -78,5 +78,5 @@ export function socialSvg(spec, { editable = false } = {}) {
     layers.footer ? layer(chip ? 'Command' : 'Templates', layers.footer) : '',
   ].join('');
   const label = ` role="img" aria-label="${spec.title}${spec.tagline ? `. ${spec.tagline}` : ''}"`;
-  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"${label}><clipPath id="frame"><rect width="${W}" height="${H}"/></clipPath><g clip-path="url(#frame)">${body}</g></svg>\n`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"${label}><clipPath id="frame"><rect width="${W}" height="${H}"${spec.radius ? ` rx="${r(spec.radius)}"` : ""}/></clipPath><g clip-path="url(#frame)">${body}</g></svg>\n`;
 }
