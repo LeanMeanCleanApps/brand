@@ -96,7 +96,7 @@ To add a template, add it to `templates` in `scripts/brand.mjs` with a hue nobod
 
 Changes are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). For help, bugs and ideas, open an issue. Security problems go through the [security policy](https://github.com/LeanMeanCleanApps/.github/blob/main/SECURITY.md), not an issue.
 
-Everything here is built and maintained by [Stephen Walsh](https://github.com/stphnwlsh) with strong coffee and a healthy disregard for ceremony. If it saves you some time, you can [sponsor the work](https://github.com/sponsors/stphnwlsh).
+Everything here is built and maintained by [Stephen Walsh](https://github.com/stphnwlsh) with strong coffee and a healthy disregard for pomp and ceremony. If it saves you some time, you can [sponsor the work](https://github.com/sponsors/stphnwlsh).
 
 ## Licence
 
