@@ -1,0 +1,53 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    name: Build Assets
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        id: setup
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install
+        id: install
+        run: npm ci
+
+      - name: Build
+        id: build
+        run: npm run build
+
+      - name: Check Committed Assets
+        id: check
+        run: |
+          git add --intent-to-add assets tokens
+          if ! git diff --quiet -- assets tokens; then
+            echo "::error::assets/ or tokens/ is out of date. Run npm run build and commit the result."
+            git diff --stat -- assets tokens
+            exit 1
+          fi
