@@ -24,7 +24,6 @@ export const org = {
   name: 'Lean Mean Clean Apps',
   handle: 'LeanMeanCleanApps',
   tagline: 'Clean Architecture templates for .NET, minus the ceremony.',
-  site: 'https://leanmeancleanapps.github.io',
 };
 
 // One hue per template. Reserved entries are hue slots held for templates that don't exist yet.
