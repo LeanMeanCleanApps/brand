@@ -4,7 +4,7 @@
 
 # Lean Mean Clean Apps brand
 
-Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET templates. Every file is generated from a handful of scripts, so the whole family stays in step.
+Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET templates. Every file is generated from a handful of scripts, so the whole family stays in step. Nobody has opened Illustrator in anger, and nobody ever will.
 
 **Docs:** [leanmeancleanapps.github.io/brand](https://leanmeancleanapps.github.io/brand/), with every file, the full brand rules and a guide to where each asset goes.
 
@@ -32,7 +32,7 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 | Clean GraphQL API | `graphql` | Pink | [CleanGraphQLApi](https://github.com/stphnwlsh/CleanGraphQLApi) |
 | Clean Model Context Protocol | `mcp` | Violet | [CleanModelContextProtocol](https://github.com/stphnwlsh/CleanModelContextProtocol) |
 | Clean Lambda Function | `lambda` | Amber | [CleanLamdaFunction](https://github.com/stphnwlsh/CleanLamdaFunction) |
-| gRPC, Worker, CLI | `grpc`, `worker`, `cli` | Cyan, red, lime | Reserved for templates that don't exist yet |
+| gRPC, Worker, CLI | `grpc`, `worker`, `cli` | Cyan, red, lime | Reserved for templates that don't exist yet. Ambitious, we know. |
 
 ## What's in here
 
@@ -71,7 +71,7 @@ The editable social SVGs in `social/source/` need the three typefaces in `fonts/
 - **Use the small version at 48 pixels and below.** It keeps the core and two rings with wider cuts so it still reads at favicon size.
 - **Dark backgrounds by default.** On light backgrounds use the `-light` version, or keep the ink tile or circle behind the standard one.
 - **Leave clear space** of an eighth of the mark's width on every side. The tile, square and circle versions already include it.
-- **Please don't** add glows, gradients or shadows, rotate it, mix two templates' hues, put text inside it, or redraw it by hand. Fix the generator instead.
+- **Please don't** add glows, gradients or shadows, rotate it, mix two templates' hues, put text inside it, or redraw it by hand. Fix the generator instead. The mark has been through enough.
 
 ## Colours and type
 
@@ -88,7 +88,7 @@ npm ci
 npm run build
 ```
 
-Commit what changes. CI runs the same build and fails if the committed files are out of date.
+Commit what changes. CI runs the same build and fails if the committed files are out of date, so "I'll regenerate it later" isn't an option.
 
 To add a template, add it to `templates` in `scripts/brand.mjs` with a hue nobody else uses, then build. You get its logos, web icons, social preview and Starlight accent. The ring shapes live in `scripts/geometry.mjs`.
 
