@@ -55,6 +55,17 @@ A short strip for the top of each template's README and NuGet readme, in `assets
   ]}
 />
 
+The organisation's own repositories get the same strip in the spectrum mark: `org` for `.github`, `site` for the website and `brand` for this repository.
+
+<SocialGrid
+  dir="banners"
+  files={[
+    { file: 'org', title: 'The shared bits (.github)', size: '1280 × 320' },
+    { file: 'site', title: 'The website', size: '1280 × 320' },
+    { file: 'brand', title: 'The brand', size: '1280 × 320' },
+  ]}
+/>
+
 ## Making a new one
 
 Add an entry to the `socials` list in `scripts/build.mjs` and run `npm run build`. The layout adapts to the size you give it: the mark crops off the right edge, and the text block centres itself on the left.
