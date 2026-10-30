@@ -1,0 +1,14 @@
+---
+// One logo file from assets/logos. variant is the part of the file name after the mark's key.
+interface Props {
+  mark: string;
+  variant?: string;
+  alt?: string;
+  size?: string;
+}
+const { mark, variant = 'tile', alt = '', size } = Astro.props;
+const file = variant ? `${mark}-${variant}` : mark;
+const src = `${import.meta.env.BASE_URL}assets/logos/${mark}/svg/${file}.svg`;
+---
+
+<img class="cl-mark" src={src} alt={alt} style={size ? `width:${size}` : undefined} loading="lazy" />
