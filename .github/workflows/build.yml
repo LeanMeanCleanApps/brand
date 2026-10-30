@@ -55,6 +55,8 @@ jobs:
   analysis:
     name: Static Analysis
     runs-on: ubuntu-latest
+    # Code scanning on a private repository needs GitHub Code Security, so this runs once the repository is public.
+    if: ${{ !github.event.repository.private }}
     permissions:
       actions: read
       contents: read
