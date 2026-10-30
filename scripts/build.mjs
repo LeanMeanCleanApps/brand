@@ -196,6 +196,31 @@ for (const t of current) {
   write(out('assets', 'banners', 'png', `${t.key}.png`), png(svg, 1280));
 }
 
+// The same strip for the organisation's own repositories, in the spectrum mark.
+const orgBanners = [
+  { key: 'org', title: 'The shared bits', tagline: 'Community files every repository picks up, minus the copy and paste.', accent: scales.slate },
+  { key: 'site', title: 'The website', tagline: 'The home page and the docs for every template, minus the ceremony.', accent: scales.leaf },
+  { key: 'brand', title: 'The brand', tagline: 'Logos, colours and banners, minus the design committee.', accent: scales.slate },
+];
+
+for (const b of orgBanners) {
+  const spec = {
+    width: 1280,
+    height: 320,
+    scale: 0.8,
+    radius: 20,
+    kicker: org.name,
+    title: b.title,
+    tagline: b.tagline,
+    logo: { fill: byKey['org-spectrum'].dark, core: neutrals.paper },
+    accent: b.accent,
+  };
+  const svg = socialSvg(spec);
+  write(out('assets', 'banners', 'svg', `${b.key}.svg`), svg);
+  write(out('assets', 'banners', 'source', `${b.key}.svg`), socialSvg(spec, { editable: true }));
+  write(out('assets', 'banners', 'png', `${b.key}.png`), png(svg, 1280));
+}
+
 // ---------- Preview for the README ----------
 
 {
