@@ -92,6 +92,12 @@ Commit what changes. CI runs the same build and fails if the committed files are
 
 To add a template, add it to `templates` in `scripts/brand.mjs` with a hue nobody else uses, then build. You get its logos, web icons, social preview and Starlight accent. The ring shapes live in `scripts/geometry.mjs`.
 
+## Contributing and support
+
+Changes are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). For help, bugs and ideas, open an issue. Security problems go through the [security policy](https://github.com/LeanMeanCleanApps/.github/blob/main/SECURITY.md), not an issue.
+
+Everything here is built and maintained by [Stephen Walsh](https://github.com/stphnwlsh) with strong coffee and a healthy disregard for ceremony. If it saves you some time, you can [sponsor the work](https://github.com/sponsors/stphnwlsh).
+
 ## Licence
 
 [MIT](LICENSE.md). The fonts in `fonts/` are under the [SIL Open Font Licence](https://openfontlicense.org), with a copy next to each one.
