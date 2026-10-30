@@ -1,0 +1,17 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<Default><slot /></Default>
+<p class="cl-footer-note">
+  Made by Stephen Walsh with strong coffee and a healthy disregard for ceremony. Not affiliated with Uncle Bob, a certain
+  billionaire's chest piece, or anyone with a marketing budget.
+</p>
+
+<style>
+  .cl-footer-note {
+    margin-top: 1.5rem;
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-3);
+  }
+</style>

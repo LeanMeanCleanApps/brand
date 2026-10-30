@@ -135,11 +135,11 @@ const socials = [
     accent: byKey[`org-${v}`].accent,
   })),
   {
-    file: 'design-library',
+    file: 'brand',
     width: 1280,
     height: 640,
     kicker: org.name,
-    title: 'Design Library',
+    title: 'Brand',
     tagline: 'Logos, colours, type and social templates for every template we make.',
     marks: familyMarks,
     logo: { fill: byKey['org-spectrum'].dark, core: neutrals.paper },
@@ -189,7 +189,7 @@ for (const s of socials) {
   };
   const heading =
     outline({ text: org.name, role: 'display', weight: 800, size: 60, x: 80, y: 120, fill: neutrals.paper, tracking: -0.02 }) +
-    outline({ text: 'Design library', role: 'body', weight: 400, size: 28, x: 84, y: 168, fill: scales.slate[300] });
+    outline({ text: 'Brand', role: 'body', weight: 400, size: 28, x: 84, y: 168, fill: scales.slate[300] });
   const orgRow = [['org-slate', 'Slate', 'Default'], ['org-leaf', 'Leaf', 'Alternative'], ['org-spectrum', 'Spectrum', 'Banners']]
     .map(([k, l, n], i) => cell(80 + i * 330, 230, 270, byKey[k], l, n)).join('');
   const tRow = templates.map((t, i) => cell(80 + i * 184, 650, 150, byKey[t.key], short[t.key], t.reserved ? 'Reserved' : null)).join('');
