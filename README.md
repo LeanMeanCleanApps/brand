@@ -10,7 +10,7 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
   <img src="assets/preview.png" alt="The Lean Mean Clean Apps marks: spectrum, slate and leaf organisation marks above one ring mark per template." width="100%">
 </p>
 
-**Docs:** [leanmeancleanapps.github.io/brand](https://leanmeancleanapps.github.io/brand/), with every file, the full brand rules and a guide to where each asset goes.
+**Docs:** [leanmeancleanapps.github.io/brand](https://leanmeancleanapps.github.io/brand/), with every file, the full brand rules and a guide to where each asset goes. The pages live with the rest of the docs in the [website](https://github.com/LeanMeanCleanApps/leanmeancleanapps.github.io) repository, which checks this one out every time it builds, so a change merged here shows up there by the next morning.
 
 ## Where each file goes
 
