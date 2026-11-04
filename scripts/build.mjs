@@ -198,9 +198,9 @@ for (const t of current) {
 
 // The same strip for the organisation's own repositories, in the spectrum mark.
 const orgBanners = [
-  { key: 'org', title: 'Shared', tagline: 'Community files every repository picks up, minus the copy and paste.', accent: scales.slate },
-  { key: 'site', title: 'Website', tagline: 'The home page, the docs for every template and the brand, minus the ceremony.', accent: scales.leaf },
-  { key: 'brand', title: 'Brand', tagline: 'Logos, colours and banners, minus the design committee.', accent: scales.slate },
+  { key: 'org', title: 'The Shared Bits', tagline: 'Community files every repository picks up, minus the copy and paste.', accent: scales.slate },
+  { key: 'site', title: 'The Website', tagline: 'The home page, the docs for every template and the brand, minus the ceremony.', accent: scales.leaf },
+  { key: 'brand', title: 'The Brand', tagline: 'Logos, colours and banners, minus the design committee.', accent: scales.slate },
 ];
 
 for (const b of orgBanners) {
