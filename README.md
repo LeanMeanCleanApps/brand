@@ -10,7 +10,7 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
   <img src="assets/preview.png" alt="The Lean Mean Clean Apps marks: spectrum, slate and leaf organisation marks above one ring mark per template." width="100%">
 </p>
 
-**Docs:** [leanmeancleanapps.github.io/brand](https://leanmeancleanapps.github.io/brand/), with every file, the full brand rules and a guide to where each asset goes. The pages live with the rest of the docs in the [website](https://github.com/LeanMeanCleanApps/leanmeancleanapps.github.io) repository, which checks this one out every time it builds, so a change merged here shows up there by the next morning.
+**Docs:** [leanmeancleanapps.github.io/brand](https://leanmeancleanapps.github.io/brand/), with every file, the full brand rules and a guide to where each asset goes. The pages live with the rest of the docs in the [website](https://github.com/LeanMeanCleanApps/leanmeancleanapps.github.io) repository, which checks out the newest release of this one every time it builds.
 
 ## Where each file goes
 
@@ -100,6 +100,10 @@ npm run build
 Commit what changes. CI runs the same build and fails if the committed files are out of date, so "I'll regenerate it later" isn't an option.
 
 To add a template, add it to `templates` in `scripts/brand.mjs` with a hue nobody else uses, then build. You get its logos, web icons, social preview and Starlight accent. The ring shapes live in `scripts/geometry.mjs`.
+
+## Releases
+
+Merging into `main` updates the files that READMEs and NuGet pages link to straight away, but the website only moves when there's a release. To make one, run the **Release** workflow from the Actions tab. It rebuilds everything to check `main` is current, tags it with the date (`2026.11.04`, or `2026.11.04.2` if you're having a busy day) and attaches the whole kit as a zip. The website picks the new release up on its next build, which happens every morning, or straight away if you run its Site workflow by hand.
 
 ## Contributing and support
 

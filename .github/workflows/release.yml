@@ -1,0 +1,88 @@
+name: Release
+
+# Releases are made by hand when the brand changes. The website builds from the newest release, so nothing
+# merged here reaches leanmeancleanapps.github.io until it's released.
+on:
+  workflow_dispatch:
+    inputs:
+      notes:
+        description: What changed, in a sentence. GitHub adds the merged pull requests below it.
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        id: setup
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install
+        id: install
+        run: npm ci
+
+      - name: Build
+        id: build
+        run: npm run build
+
+      - name: Check Committed Assets
+        id: check
+        run: |
+          git add --intent-to-add assets tokens
+          if ! git diff --quiet -- assets tokens; then
+            echo "::error::assets/ or tokens/ is out of date on main. Run npm run build, commit the result and release again."
+            exit 1
+          fi
+
+      - name: Version
+        id: version
+        # The date, like the templates. A second release on the same day gets .2, then .3.
+        run: |
+          DATE=$(TZ=America/Chicago date +'%Y.%m.%d')
+          VERSION=$DATE
+          N=1
+          while gh release view "$VERSION" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; do
+            N=$((N + 1))
+            VERSION="$DATE.$N"
+          done
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+
+      - name: Package
+        id: package
+        run: zip -q -r "brand-kit-$VERSION.zip" assets tokens fonts LICENSE.md
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+
+      - name: GitHub Release
+        id: github-release
+        run: |
+          gh release create "$VERSION" "brand-kit-$VERSION.zip" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "$VERSION" --notes "${NOTES:-Every logo, banner, social template, token and font, as of $VERSION.}" --generate-notes
+          echo "Released \`$VERSION\`. The website picks it up on its next build." >> "$GITHUB_STEP_SUMMARY"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+          NOTES: ${{ inputs.notes }}
