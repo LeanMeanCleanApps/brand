@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banners/png/brand.png" alt="Lean Mean Clean Apps: the brand. Logos, colours and banners, minus the design committee." width="100%">
+  <img src="assets/banners/png/brand.png" alt="Lean Mean Clean Apps – Brand. Logos, colours and banners, minus the design committee." width="100%">
 </p>
 
 # Lean Mean Clean Apps – Brand
