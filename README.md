@@ -2,7 +2,7 @@
   <img src="assets/banners/png/brand.png" alt="Lean Mean Clean Apps: the brand. Logos, colours and banners, minus the design committee." width="100%">
 </p>
 
-# Lean Mean Clean Apps brand
+# Lean Mean Clean Apps – Brand
 
 Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET templates. Every file is generated from a handful of scripts, so the whole family stays in step. Nobody has opened Illustrator in anger, and nobody ever will.
 
