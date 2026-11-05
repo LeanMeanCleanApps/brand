@@ -33,10 +33,10 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 | Organisation, spectrum | `org-spectrum` | Every template hue | The default: avatars, favicons, banners and link previews |
 | Organisation, slate | `org-slate` | Slate | The quiet version, for when spectrum would be too loud |
 | Organisation, leaf | `org-leaf` | Leaf | The alternative, and the accent colour for organisation websites |
-| [Clean Minimal API](https://leanmeancleanapps.github.io/minimalapi/) | `minimalapi` | Emerald | [CleanMinimalApi](https://github.com/stphnwlsh/CleanMinimalApi) |
-| [Clean Model Context Protocol](https://leanmeancleanapps.github.io/mcp/) | `mcp` | Violet | [CleanModelContextProtocol](https://github.com/stphnwlsh/CleanModelContextProtocol) |
-| [Clean GraphQL API](https://leanmeancleanapps.github.io/graphql/) | `graphql` | Pink | [CleanGraphQLApi](https://github.com/stphnwlsh/CleanGraphQLApi) |
-| [Clean Web API](https://leanmeancleanapps.github.io/webapi/) | `webapi` | Blue | [CleanWebApi](https://github.com/stphnwlsh/CleanWebApi) |
+| [Clean Minimal API](https://leanmeancleanapps.github.io/minimalapi/) | `minimalapi` | Emerald | [CleanMinimalApi](https://github.com/LeanMeanCleanApps/CleanMinimalApi) |
+| [Clean Model Context Protocol](https://leanmeancleanapps.github.io/mcp/) | `mcp` | Violet | [CleanModelContextProtocol](https://github.com/LeanMeanCleanApps/CleanModelContextProtocol) |
+| [Clean GraphQL API](https://leanmeancleanapps.github.io/graphql/) | `graphql` | Pink | [CleanGraphQLApi](https://github.com/LeanMeanCleanApps/CleanGraphQLApi) |
+| [Clean Web API](https://leanmeancleanapps.github.io/webapi/) | `webapi` | Blue | [CleanWebApi](https://github.com/LeanMeanCleanApps/CleanWebApi) |
 | [Clean Lambda Function](https://leanmeancleanapps.github.io/lambda/) | `lambda` | Amber | [CleanLambdaFunction](https://github.com/LeanMeanCleanApps/CleanLambdaFunction) |
 | gRPC, Worker, CLI | `grpc`, `worker`, `cli` | Cyan, red, lime | Reserved for templates that don't exist yet. Ambitious, we know. |
 
