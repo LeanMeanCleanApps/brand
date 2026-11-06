@@ -5,6 +5,7 @@ import path from 'node:path';
 import { Resvg } from '@resvg/resvg-js';
 import { neutrals, scales, org, templates } from './brand.mjs';
 import { tonal, spectrum, mono, DARK_STEPS, LIGHT_STEPS, SLATE_DARK_STEPS, SLATE_LIGHT_STEPS } from './colours.mjs';
+import { iconBody, iconNames, iconSvg } from './icons.mjs';
 import { logoSvg, markBody } from './logo.mjs';
 import { socialSvg } from './social.mjs';
 import { outline } from './text.mjs';
@@ -219,6 +220,27 @@ for (const b of orgBanners) {
   write(out('assets', 'banners', 'svg', `${b.key}.svg`), svg);
   write(out('assets', 'banners', 'source', `${b.key}.svg`), socialSvg(spec, { editable: true }));
   write(out('assets', 'banners', 'png', `${b.key}.png`), png(svg, 1280));
+}
+
+// ---------- Icons ----------
+// One set per template that needs them, for items inside it such as MCP tools, prompts and resources.
+
+const iconSets = [{ key: 'mcp', hue: templates.find((t) => t.key === 'mcp').hue }];
+
+for (const set of iconSets) {
+  const dir = (...p) => out('assets', 'icons', set.key, ...p);
+  for (const name of iconNames) {
+    const svg = iconSvg(name, set.hue);
+    write(dir('svg', `${name}.svg`), svg);
+    for (const s of [16, 32, 64, 128, 256]) write(dir('png', `${name}-${s}.png`), png(svg, s));
+  }
+
+  // Every icon at three sizes, on dark and on light.
+  const place = (name, x, y, size) => `<g transform="translate(${x} ${y}) scale(${size / 1024})">${iconBody(name, set.hue)}</g>`;
+  const row = (y) => iconNames.map((name, i) => place(name, 40 + i * 160, y, 128) + place(name, 40 + i * 160, y + 140, 32) + place(name, 84 + i * 160, y + 148, 16)).join('');
+  const W = 680;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} 440" width="${W}" height="440"><rect width="${W}" height="220" fill="${neutrals.ink}"/><rect y="220" width="${W}" height="220" fill="${neutrals.paper}"/>${row(30)}${row(250)}</svg>\n`;
+  write(dir('preview.png'), png(svg, W * 2));
 }
 
 // ---------- Preview for the README ----------

@@ -24,6 +24,7 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 | Banner at the top of the organisation's own READMEs | `assets/banners/png/org.png` for `.github`, `site.png` for the website, `brand.png` for this one |
 | NuGet package icon | Replace `icon.png` at the root of each template repository with `assets/logos/<template>/png/<template>-square-128.png`. The csproj already packs it as `images/icon.png`. |
 | Website favicons and manifest icons | `assets/logos/<mark>/web/` |
+| Icons for MCP tools, prompts and resources | `assets/icons/mcp/png/<icon>-<size>.png`, in movie, author, review and server |
 | Link preview for a website | [og-image.png](assets/social/png/og-image.png) |
 
 ## The marks
@@ -44,6 +45,7 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 
 ```text
 assets/
+  icons/<template>/     Small icons for items inside a template, in svg/ and png/
   logos/<mark>/svg/     SVG logos in every variant
   logos/<mark>/png/     PNG logos from 16 to 1024 pixels
   logos/<mark>/web/     favicon.svg, favicon.ico, apple-touch-icon.png, manifest icons
