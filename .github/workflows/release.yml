@@ -1,7 +1,7 @@
 name: Release
 
 # Releases are made by hand when the brand changes. The website builds from the newest release, so nothing
-# merged here reaches leanmeancleanapps.github.io until it's released.
+# merged here reaches leanmeanclean.dev until it's released.
 on:
   workflow_dispatch:
     inputs:
