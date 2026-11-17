@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for wanting to improve the brand. Design by committee is how logos get glows, so we keep the committee small and the rules short. The full guide, with where every script lives and how to add a template, is on the site: [Contributing](https://leanmeancleanapps.github.io/brand/contributing/). The short version:
+Thanks for wanting to improve the brand. Design by committee is how logos get glows, so we keep the committee small and the rules short. The full guide, with where every script lives and how to add a template, is on the site: [Contributing](https://leanmeanclean.dev/brand/contributing/). The short version:
 
 1. Everything in `assets/` and `tokens/` is generated. Don't edit those files by hand, because the next build will quietly undo your work. Change the scripts in `scripts/` instead.
 1. Run `npm ci` and `npm run build` with Node 24, then commit whatever changed. CI runs the same build and fails if the committed files are stale.

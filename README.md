@@ -10,7 +10,7 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
   <img src="assets/preview.png" alt="The Lean Mean Clean Apps marks: spectrum, slate and leaf organisation marks above one ring mark per template." width="100%">
 </p>
 
-**Docs:** [leanmeancleanapps.github.io/brand](https://leanmeancleanapps.github.io/brand/), with every file, the full brand rules and a guide to where each asset goes. The pages live with the rest of the docs in the [website](https://github.com/LeanMeanCleanApps/leanmeancleanapps.github.io) repository, which checks out the newest release of this one every time it builds.
+**Docs:** [leanmeanclean.dev/brand](https://leanmeanclean.dev/brand/), with every file, the full brand rules and a guide to where each asset goes. The pages live with the rest of the docs in the [website](https://github.com/LeanMeanCleanApps/leanmeancleanapps.github.io) repository, which checks out the newest release of this one every time it builds.
 
 ## Where each file goes
 
@@ -34,11 +34,11 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 | Organisation, spectrum | `org-spectrum` | Every template hue | The default: avatars, favicons, banners and link previews |
 | Organisation, slate | `org-slate` | Slate | The quiet version, for when spectrum would be too loud |
 | Organisation, leaf | `org-leaf` | Leaf | The alternative, and the accent colour for organisation websites |
-| [Clean Minimal API](https://leanmeancleanapps.github.io/minimalapi/) | `minimalapi` | Emerald | [CleanMinimalApi](https://github.com/LeanMeanCleanApps/CleanMinimalApi) |
-| [Clean Model Context Protocol](https://leanmeancleanapps.github.io/mcp/) | `mcp` | Violet | [CleanModelContextProtocol](https://github.com/LeanMeanCleanApps/CleanModelContextProtocol) |
-| [Clean GraphQL API](https://leanmeancleanapps.github.io/graphql/) | `graphql` | Pink | [CleanGraphQLApi](https://github.com/LeanMeanCleanApps/CleanGraphQLApi) |
-| [Clean Web API](https://leanmeancleanapps.github.io/webapi/) | `webapi` | Blue | [CleanWebApi](https://github.com/LeanMeanCleanApps/CleanWebApi) |
-| [Clean Lambda Function](https://leanmeancleanapps.github.io/lambda/) | `lambda` | Amber | [CleanLambdaFunction](https://github.com/LeanMeanCleanApps/CleanLambdaFunction) |
+| [Clean Minimal API](https://leanmeanclean.dev/minimalapi/) | `minimalapi` | Emerald | [CleanMinimalApi](https://github.com/LeanMeanCleanApps/CleanMinimalApi) |
+| [Clean Model Context Protocol](https://leanmeanclean.dev/mcp/) | `mcp` | Violet | [CleanModelContextProtocol](https://github.com/LeanMeanCleanApps/CleanModelContextProtocol) |
+| [Clean GraphQL API](https://leanmeanclean.dev/graphql/) | `graphql` | Pink | [CleanGraphQLApi](https://github.com/LeanMeanCleanApps/CleanGraphQLApi) |
+| [Clean Web API](https://leanmeanclean.dev/webapi/) | `webapi` | Blue | [CleanWebApi](https://github.com/LeanMeanCleanApps/CleanWebApi) |
+| [Clean Lambda Function](https://leanmeanclean.dev/lambda/) | `lambda` | Amber | [CleanLambdaFunction](https://github.com/LeanMeanCleanApps/CleanLambdaFunction) |
 | gRPC, Worker, CLI | `grpc`, `worker`, `cli` | Cyan, red, lime | Reserved for templates that don't exist yet. Ambitious, we know. |
 
 ## What's in here
