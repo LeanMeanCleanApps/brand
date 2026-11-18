@@ -7,6 +7,7 @@ import { neutrals, scales, org, templates } from './brand.mjs';
 import { tonal, spectrum, mono, DARK_STEPS, LIGHT_STEPS, SLATE_DARK_STEPS, SLATE_LIGHT_STEPS } from './colours.mjs';
 import { iconBody, iconNames, iconSvg } from './icons.mjs';
 import { logoSvg, markBody } from './logo.mjs';
+import { linkedinCover, linkedinCoverSvg } from './linkedin.mjs';
 import { socialSvg } from './social.mjs';
 import { outline } from './text.mjs';
 import { writeTokens } from './tokens.mjs';
@@ -174,6 +175,16 @@ for (const s of socials) {
   write(out('assets', 'social', 'svg', `${s.file}.svg`), svg);
   write(out('assets', 'social', 'source', `${s.file}.svg`), socialSvg(s, { editable: true }));
   write(out('assets', 'social', 'png', `${s.file}.png`), png(svg, s.width));
+}
+
+// The LinkedIn company page cover, at LinkedIn's size and twice that for sharp screens.
+{
+  const spec = { kicker: 'Open source templates for .NET', title: org.name, tagline: org.tagline, logo: { fill: byKey['org-spectrum'].dark, core: neutrals.paper } };
+  const svg = linkedinCoverSvg(spec);
+  write(out('assets', 'social', 'svg', 'linkedin-cover.svg'), svg);
+  write(out('assets', 'social', 'source', 'linkedin-cover.svg'), linkedinCoverSvg(spec, { editable: true }));
+  write(out('assets', 'social', 'png', 'linkedin-cover.png'), png(svg, linkedinCover.width));
+  write(out('assets', 'social', 'png', 'linkedin-cover-2x.png'), png(svg, linkedinCover.width * 2));
 }
 
 // ---------- README banners ----------

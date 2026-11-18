@@ -26,6 +26,7 @@ Logos, social templates and colour tokens for the Lean Mean Clean Apps .NET temp
 | Website favicons and manifest icons | `assets/logos/<mark>/web/` |
 | Icons for MCP tools, prompts and resources | `assets/icons/mcp/png/<icon>-<size>.png`, in movie, author, review and server |
 | Link preview for a website | [og-image.png](assets/social/png/og-image.png) |
+| LinkedIn company page cover | [linkedin-cover-2x.png](assets/social/png/linkedin-cover-2x.png), or [linkedin-cover.png](assets/social/png/linkedin-cover.png) at LinkedIn's own 1128 x 191. The text sits right of where LinkedIn puts the page logo, so don't nudge it left. |
 
 ## The marks
 
