@@ -110,7 +110,7 @@ Merging into `main` updates the files that READMEs and NuGet pages link to strai
 
 ## Contributing and support
 
-Changes are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). For help, bugs and ideas, open an issue. Security problems go through the [security policy](https://github.com/LeanMeanCleanApps/.github/blob/main/SECURITY.md), not an issue.
+Changes are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). For help, bugs and ideas, open an issue. Security problems go through the [security policy](https://github.com/LeanMeanCleanApps/.github/blob/main/SECURITY.md), not an issue. If a logo, banner or colour pair gets in someone's way, the [accessibility statement](ACCESSIBILITY.md) says how to tell us. The pairs that pass contrast are on the [colour page](https://leanmeanclean.dev/brand/colour/#contrast).
 
 Everything here is built and maintained by the Lean Mean Clean Apps team, which is [Stephen Walsh](https://github.com/stphnwlsh) for now, with strong coffee and a healthy disregard for pomp and ceremony. If it saves you some time, you can [sponsor the work](https://github.com/sponsors/stphnwlsh).
 
