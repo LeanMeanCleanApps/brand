@@ -12,9 +12,9 @@
 
 :root[data-theme='light'] {
   --sl-color-accent-low: #FEF3C7;
-  --sl-color-accent: #B45309;
+  --sl-color-accent: #92400E;
   --sl-color-accent-high: #78350F;
   --sl-color-purple-low: #FEF3C7;
-  --sl-color-purple: #B45309;
+  --sl-color-purple: #92400E;
   --sl-color-purple-high: #78350F;
 }

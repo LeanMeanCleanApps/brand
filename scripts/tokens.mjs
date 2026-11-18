@@ -85,6 +85,8 @@ pre {
   const accents = [...templates.map((t) => [t.key, t.name, t.hue]), ['org', 'Lean Mean Clean Apps', 'leaf']];
   for (const [key, name, hue] of accents) {
     const s = scales[hue];
+    // Amber 700 is 4.4:1 on a raised card in the light theme, so it takes 800 to pass AA.
+    const light = s[hue === 'amber' ? 800 : 700];
     fs.writeFileSync(
       path.join(dir, 'starlight', `${key}.css`),
       `${header(`Starlight accent for ${name} (${hue}).`)}
@@ -99,10 +101,10 @@ pre {
 
 :root[data-theme='light'] {
   --sl-color-accent-low: ${s[100]};
-  --sl-color-accent: ${s[700]};
+  --sl-color-accent: ${light};
   --sl-color-accent-high: ${s[900]};
   --sl-color-purple-low: ${s[100]};
-  --sl-color-purple: ${s[700]};
+  --sl-color-purple: ${light};
   --sl-color-purple-high: ${s[900]};
 }
 `,
